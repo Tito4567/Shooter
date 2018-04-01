@@ -28,9 +28,10 @@ public class Shooter1 extends JFrame implements ActionListener
 		setVisible(true);
 		setSize(1000, 1000);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		con.start();
-		con2.start();
+		//con.start();
+		//con2.start();
 		addKeyListener(con);
+		addKeyListener(con2);
 		add(ship);
 	}
 

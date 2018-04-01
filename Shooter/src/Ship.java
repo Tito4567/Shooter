@@ -10,10 +10,10 @@ import javax.swing.JPanel;
 
 public class Ship extends JPanel 
 {
-	private double x;
-	private double y;
-	private double x1;
-	private double y1;
+	private double x = 0;
+	private double y = 0;
+	private double x1 = 670;
+	private double y1 = 0;
 	public double rotate = 0;
 	BufferedImage image, image1;
 		
@@ -23,13 +23,13 @@ public class Ship extends JPanel
 	{
 	  	 try
          {       
-          image = ImageIO.read(new File("C:/Users/Tito/Documents/ship2.png"));
-          image1 = ImageIO.read(new File("C:/Users/Tito/Pictures/2014-08-13/016.jpg"));
+          image = ImageIO.read(new File("C:/Users/Kaylard/Desktop/Archangel-Michael.jpg"));
+          image1 = ImageIO.read(new File("C:/Users/Kaylard/Desktop/Archangel-Michael.jpg"));
           // "C:/Users/Tito/Documents/ship1.jpg"
                     
          } catch(IOException r)
          {
-            System.out.println(r);
+            System.out.println(r.getMessage());
          }
 	 }
     
@@ -62,12 +62,12 @@ public class Ship extends JPanel
    
    public void Xcoor(double d)
    {
-	   this.x1 = d;
+	   this.x1 += d;
    }
    
    public void Ycoor(double e)
    {
-	   this.y1 = e;
+	   this.y1 += e;
    }
    
 }

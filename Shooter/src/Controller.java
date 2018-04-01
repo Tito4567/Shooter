@@ -5,7 +5,7 @@ public class Controller extends Thread implements KeyListener
 {
 	private double x = 0; 
 	private double y = 0;
-	private double x1 = 670;
+	private double x1 = 0;
 	private double y1 = 0;		
 	private int switcher;
 	public double angle = 0;
@@ -31,9 +31,9 @@ public class Controller extends Thread implements KeyListener
 	public void keyPressed(KeyEvent arg0)
 	{
 		System.out.println(arg0.getKeyCode());
-		switch(switcher)
-		{
-			case 0: 
+		//switch(switcher)
+		//{
+			//case 0: 
 				
 				if (38 == arg0.getKeyCode())
 				{
@@ -57,9 +57,9 @@ public class Controller extends Thread implements KeyListener
 					this.x--;
 					angle(arg0.getKeyCode());
 				}
-					break;
+				//	break;
 				
-			case 1: 
+			//case 1: 
 				
 				if (87 == arg0.getKeyCode())
 				{
@@ -85,8 +85,8 @@ public class Controller extends Thread implements KeyListener
 					this.x1--;
 					//angle(arg0.getKeyCode());
 				}
-				 	break;
-	    }
+				// 	break;
+	    //}
 	}
 	
 	@Override
