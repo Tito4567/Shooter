@@ -9,6 +9,7 @@ public class Controller extends Thread implements KeyListener
 	private double y1 = 0;		
 	private int switcher;
 	public double angle = 0;
+	public double angle1 = 0;
 	
 		
 	public void run()
@@ -64,26 +65,26 @@ public class Controller extends Thread implements KeyListener
 				if (87 == arg0.getKeyCode())
 				{
 					this.y1--;
-					//angle( arg0.getKeyCode());
+					angleTwo( arg0.getKeyCode());
 					
 								
 				} else if (83 == arg0.getKeyCode())
 		
 				{
 					this.y1++;
-					//angle(arg0.getKeyCode());
+					angleTwo(arg0.getKeyCode());
 					
 				} else if(90 == arg0.getKeyCode())
 		
 				{
 					this.x1++;
-					//angle(arg0.getKeyCode());
+					angleTwo(arg0.getKeyCode());
 			
 				} else if (65 == arg0.getKeyCode())
 		
 				{
 					this.x1--;
-					//angle(arg0.getKeyCode());
+					angleTwo(arg0.getKeyCode());
 				}
 				// 	break;
 	    //}
@@ -133,5 +134,13 @@ public class Controller extends Thread implements KeyListener
 		else if (shift == 39 ){ angle = 0; }
 		else if (shift == 38 ){ angle = 90; }
 		else if (shift == 40 ){ angle = 270; }
+	}
+	
+	public void angleTwo (int shift)
+	{
+		if (shift == 87 ) { angle1 = 180; }
+		else if (shift == 83 ){ angle1 = 0; }
+		else if (shift == 90 ){ angle1 = 90; }
+		else if (shift == 65 ){ angle1 = 270; }
 	}
 }

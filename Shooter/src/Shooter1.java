@@ -3,6 +3,7 @@ import java.awt.event.ActionListener;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import javax.swing.Timer;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 public class Shooter1 extends JFrame implements ActionListener
@@ -13,7 +14,7 @@ public class Shooter1 extends JFrame implements ActionListener
 	ExecutorService executor = Executors.newCachedThreadPool();
 	Ship ship = new Ship();
 	Controller con = new Controller();
-	Controller con2 = new Controller();
+	Controller con1 = new Controller();
 		
 
 	public static void main(String[] arg)
@@ -23,6 +24,7 @@ public class Shooter1 extends JFrame implements ActionListener
 	
 	Shooter1()
 	{
+		setIconImage(new ImageIcon("C:/Users/Kaylard/Desktop/Archangel-Michael.jpg").getImage());
 		Timer time = new Timer (1, this);
 		time.start();
 		setVisible(true);
@@ -31,7 +33,7 @@ public class Shooter1 extends JFrame implements ActionListener
 		//con.start();
 		//con2.start();
 		addKeyListener(con);
-		addKeyListener(con2);
+		addKeyListener(con1);
 		add(ship);
 	}
 
@@ -41,9 +43,11 @@ public class Shooter1 extends JFrame implements ActionListener
 		repaint();
 		ship.Xcoor1(con.xCoor()); 
 		ship.Ycoor1(con.yCoor());
-		ship.Xcoor(con2.x1Coor());
-		ship.Ycoor(con2.y1Coor());
+		ship.Xcoor(con1.x1Coor());
+		ship.Ycoor(con1.y1Coor());
 		ship.rotate = con.angle;
+		// just added below
+		ship.rotate1 = con1.angle1;
 	}
 
 }
