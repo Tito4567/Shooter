@@ -13,3 +13,12 @@ I still have to implement the threads to allow the ships to behave on their
 own respective threads as opposed to both working off the main thread. 
 
 I will be using UDP to control threads over the internet. 
+
+
+8/25/18
+Last night I added an api that will allow me to use my Xbox 360 controller.
+There have been several other changes that has happened through the months.
+I still have to implement the RMI (Remote Method Invocation) to allow players
+to compete online. I don't think multithreading is necessary. Once I have 
+more than one player going, I will be able to see.
+
