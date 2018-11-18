@@ -27,3 +27,7 @@ more than one player going, I will be able to see.
 Uploaded files from updates that were made on
 8/25/18. I have a few ideas for the keyboard or
 controller option. 
+
+11/18/18
+I started making a Bootstrapper file to as a starting point
+to get the game going. I just uploaded the new files and modifications.
