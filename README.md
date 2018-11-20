@@ -31,3 +31,8 @@ controller option.
 11/18/18
 I started making a Bootstrapper file to as a starting point
 to get the game going. I just uploaded the new files and modifications.
+
+11/20/18
+Still working with the Bootstrapper, I think I'm going to have to rewrite
+the code to start at the Bootstrapper and pass desired start code to the 
+Shooter1 class. 
