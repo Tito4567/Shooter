@@ -1,6 +1,3 @@
-import java.awt.Button;
-import java.awt.Font;
-import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.ExecutorService;
@@ -11,8 +8,6 @@ import com.exlumina.j360.ValueListener;
 import com.exlumina.j360.ButtonListener;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-
 import java.lang.Math;
 
 public class Shooter1 extends JFrame implements ActionListener, ButtonListener
@@ -47,10 +42,10 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 		setSize(2000, 1000);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		con.start();
-		//con2.start();
 		addKeyListener(con);
 		addKeyListener(con1);
 		addKeyListener(weap);
+		
 		
 				
 		
@@ -201,11 +196,11 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 		//remove(ship);
 		Bootstrapper boot = new Bootstrapper();
 		add(boot);
+		//add(ship);
+		boot.removePanel(this, boot, ship, con1);
+		
+		
 		// Tito remove below
-		if(boot.input[0] != 0) {remove(boot); add(new Ship()); System.out.println("Testing 123");}
-		
-		
-		
 	}
 
 	@Override

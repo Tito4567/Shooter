@@ -42,7 +42,7 @@ public class KBController extends Thread implements KeyListener
 					//if (y < -6) {y = -5;}
 					angle( arg0.getKeyCode());
 				} else if (40 == arg0.getKeyCode())
-		
+					
 				{
 					this.y++;
 					//if (y > 6) {y = 5;}
@@ -94,6 +94,8 @@ public class KBController extends Thread implements KeyListener
 					//if (x1 < -6) {x1 = -5;}
 					angleTwo(arg0.getKeyCode());
 				}
+				
+				
 				// 	break;
 	    //}
 	}
@@ -151,7 +153,5 @@ public class KBController extends Thread implements KeyListener
 		else if (shift == 90 ){ angle1 = 90; }
 		else if (shift == 65 ){ angle1 = 270; }
 	}
-	
-	
 	
 }

@@ -7,6 +7,10 @@ import java.awt.Font;
 
 class Bootstrapper extends JPanel
 {
+	KBController cn = null;
+	Shooter1 shoot = null;
+	Bootstrapper booter = null;
+	Ship shp = null; 
 	int[] input = {0};
 	
 	private static final long serialVersionUID = 1L;
@@ -22,7 +26,9 @@ class Bootstrapper extends JPanel
 			@Override
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				input[0] = 1;						
+				shoot.remove(booter);
+				shoot.add(shp);
+				shoot.addKeyListener(cn);
 			}
 			
 		});
@@ -46,4 +52,15 @@ class Bootstrapper extends JPanel
 		g.setFont(new Font("TimesRoman", Font.PLAIN, 100));
 		g.drawString("Enter keyboard or gamepad", 450, 100);
 	}
+	
+	
+	public void removePanel(Shooter1 a, Bootstrapper b, Ship c, KBController d)
+	{
+		this.shoot = a;
+		this.booter = b;
+		this.shp = c;
+		this.cn = d;
+	}
+	
+	
 }	
