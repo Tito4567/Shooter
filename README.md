@@ -35,4 +35,4 @@ to get the game going. I just uploaded the new files and modifications.
 11/20/18
 Still working with the Bootstrapper, I think I'm going to have to rewrite
 the code to start at the Bootstrapper and pass desired start code to the 
-Shooter1 class. 
+Shooter1.java class. 
