@@ -1,14 +1,14 @@
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import javax.swing.Timer;
-import com.exlumina.j360.Controller;
-import com.exlumina.j360.ValueListener;
-import com.exlumina.j360.ButtonListener;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import java.lang.Math;
+import javax.swing.Timer;
+import com.exlumina.j360.ButtonListener;
+import com.exlumina.j360.Controller;
+import com.exlumina.j360.ValueListener;
 
 public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 {
@@ -30,21 +30,21 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 	public static void main(String[] arg) throws InterruptedException
 	{
 		new Shooter1();
+		
 	}
 	
 	Shooter1()
 	{
 		
-		setIconImage(new ImageIcon("C:/Users/Kaylard/Desktop/Shooter-master/Shooter/images/Archangel-Michael.jpg").getImage());
+		setIconImage(new ImageIcon("C:/Users/Tito/eclipse-workspace/Shooter/src/Images/Archangel-Michael.jpg").getImage());
 		Timer time = new Timer (1, this);
 		time.start();
 		setVisible(true);
-		setSize(2000, 1000);
+		setSize((int)Toolkit.getDefaultToolkit().getScreenSize().getWidth(), (int)Toolkit.getDefaultToolkit().getScreenSize().getHeight());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		con.start();
 		addKeyListener(con);
 		addKeyListener(con1);
-		addKeyListener(weap);
+		//addKeyListener(weap);
 		
 		
 				
@@ -109,11 +109,12 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 			@Override
 			public void value(int arg0)
 			{
-				//System.out.println("X coordinates");
+				System.out.println("X coordinates");
 				double a = (arg0/8000);
 				int e = (int) Math.floor(a);
 				//System.out.println(e);
 				//con.x = (double) arg0;
+				System.out.println(arg0);
 			}
 			
 		});
@@ -227,6 +228,5 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 	}
 
 }
-
 
 

@@ -1,32 +1,17 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class KBController extends Thread implements KeyListener
+public class KBController implements KeyListener
 {
 	public double x = 0; 
 	private double y = 0;
 	private double x1 = 0;
 	private double y1 = 0;		
-	private int switcher;
 	public double angle = 0;
 	public double angle1 = 0;
 	
 		
-	public void run()
-	{
-		// set up variables that run method will change
-		// value to accept and interpreted in shooter1
-		 switch (this.getName())
-		   {
-		   	case "Thread-1" : switcher = 0; 
-		   	   	break;
-		   
-		   	case "Thread-2" : switcher = 1;
-		   		break;
-		   }
-		System.out.println("switcher is "+switcher);
-	}
-	
+		
 	
 	@Override
 	public void keyPressed(KeyEvent arg0)

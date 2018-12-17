@@ -38,10 +38,10 @@ public class Ship extends JPanel
 	  	 try
          {
 	  		 
-          image[0] = ImageIO.read(new File("C:/Users/Kaylard/Desktop/Shooter-master/Shooter/images/Archangel-Michael.jpg"));
-          image[1] = ImageIO.read(new File("C:/Users/Kaylard/Desktop/Shooter-master/Shooter/images/Ship.png"));
-          image[2] = ImageIO.read(new File("C:/Users/Kaylard/Desktop/Shooter-master/Shooter/images/space.jpg"));
-          image[3] = ImageIO.read(new File("C:/Users/Kaylard/Desktop/Shooter-master/Shooter/images/Fire.jpg"));
+          image[0] = ImageIO.read(new File("C:/Users/Tito/eclipse-workspace/Shooter/src/Images/Archangel-Michael.jpg"));
+          image[1] = ImageIO.read(new File("C:/Users/Tito/eclipse-workspace/Shooter/src/Images/Ship.png"));
+          image[2] = ImageIO.read(new File("C:/Users/Tito/eclipse-workspace/Shooter/src/Images/space.jpg"));
+          //image[3] = ImageIO.read(new File("C:/Users/Kaylard/Desktop/Shooter-master/Shooter/images/Fire.jpg"));
           // "C:/Users/Tito/Documents/ship1.jpg"
                     
          } catch(IOException r)
@@ -91,7 +91,6 @@ public class Ship extends JPanel
    
    public void Xcoor1(double d)
    {
-	   System.out.println(this.x);
 	   this.x += d;	   
    }
    
@@ -110,6 +109,5 @@ public class Ship extends JPanel
 	   this.y1 += e;
    }
 }
-
 
 
