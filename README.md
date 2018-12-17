@@ -36,3 +36,8 @@ to get the game going. I just uploaded the new files and modifications.
 Still working with the Bootstrapper, I think I'm going to have to rewrite
 the code to start at the Bootstrapper and pass desired start code to the 
 Shooter1.java class. 
+
+12/16/18
+Tonight I worked on the BootStrapper file. I'm going to have 
+to learn how to use the layouts. If an image is completed on my
+computer, it may not fit on another computer. 
