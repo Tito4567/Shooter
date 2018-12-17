@@ -41,3 +41,7 @@ Shooter1.java class.
 Tonight I worked on the BootStrapper file. I'm going to have 
 to learn how to use the layouts. If an image is completed on my
 computer, it may not fit on another computer. 
+
+12/17/18
+I copied image files to Shooter. This will allow me to export the file. 
+So far it's not working.
