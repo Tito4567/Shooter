@@ -36,7 +36,7 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 	Shooter1()
 	{
 		
-		setIconImage(new ImageIcon("C:/Users/Tito/eclipse-workspace/Shooter/src/Images/Archangel-Michael.jpg").getImage());
+		setIconImage(new ImageIcon("Images/Archangel-Michael.jpg").getImage());
 		Timer time = new Timer (1, this);
 		time.start();
 		setVisible(true);
@@ -196,8 +196,8 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 		//add(ship);
 		//remove(ship);
 		Bootstrapper boot = new Bootstrapper();
-		add(boot);
-		//add(ship);
+		//add(boot);
+		add(ship);
 		boot.removePanel(this, boot, ship, con1);
 		
 		

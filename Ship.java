@@ -38,9 +38,9 @@ public class Ship extends JPanel
 	  	 try
          {
 	  		 
-          image[0] = ImageIO.read(new File("C:/Users/Tito/eclipse-workspace/Shooter/src/Images/Archangel-Michael.jpg"));
-          image[1] = ImageIO.read(new File("C:/Users/Tito/eclipse-workspace/Shooter/src/Images/Ship.png"));
-          image[2] = ImageIO.read(new File("C:/Users/Tito/eclipse-workspace/Shooter/src/Images/space.jpg"));
+          image[0] = ImageIO.read(new File("Images/Archangel-Michael.jpg"));
+          image[1] = ImageIO.read(new File("Images/Ship.png"));
+          image[2] = ImageIO.read(new File("Images/space.jpg"));
           //image[3] = ImageIO.read(new File("C:/Users/Kaylard/Desktop/Shooter-master/Shooter/images/Fire.jpg"));
           // "C:/Users/Tito/Documents/ship1.jpg"
                     
