@@ -45,3 +45,7 @@ computer, it may not fit on another computer.
 12/17/18
 I copied image files to Shooter. This will allow me to export the file. 
 So far it's not working.
+
+12/23/2018
+I was able to resize the back ground image for varying screen sizes
+
