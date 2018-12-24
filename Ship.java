@@ -68,7 +68,7 @@ public class Ship extends JPanel
 	   else if (y1 < 0) { y1 = 981; }
 	   at.scale(.70, .70);
 	   at1.scale(.25, .25);
-	   bg.scale(.70,.70);
+	   bg.scale(getWidth(), getHeight());
 	   attempt.scale(.15, .15);
 	   //at.rotate(Math.toRadians(180), image.getWidth()/2, image.getHeight()/2);
 	   //at1.rotate(Math.toRadians(360.00 - rotate), image1.getWidth()/2, image1.getHeight()/2);
@@ -77,12 +77,17 @@ public class Ship extends JPanel
 	   
 	   // just added: 
 	   Graphics2D gd = (Graphics2D) g;
-	   Graphics2D gd1 = (Graphics2D) g;
+	  // Graphics2D gd1 = (Graphics2D) g;
 	   Graphics2D g2d = (Graphics2D) g;
 	   Graphics2D trying = (Graphics2D) g;
 	   //g.drawImage(image2, 0,0, null );
 	   //super.paintComponent(g);
-	   gd1.drawImage(image[2], bg, null);
+	   //Image GImage = image[2].getScaledInstance(getWidth(), getHeight(), BufferedImage.SCALE_SMOOTH);
+	   //gd1.drawImage(image[2], bg, null);
+	   
+	   // Below is the background 
+	   Image bg2 = image[2].getScaledInstance(getWidth(), getHeight(), BufferedImage.SCALE_SMOOTH);
+	   g.drawImage(bg2, 0, 0, this);
 	   g2d.drawImage(image[0], at, null);
 	   trying.drawImage(image[3], attempt, null);
 	   gd.drawImage(image[1], at1, null);

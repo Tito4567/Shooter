@@ -110,8 +110,8 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 			public void value(int arg0)
 			{
 				System.out.println("X coordinates");
-				double a = (arg0/8000);
-				int e = (int) Math.floor(a);
+				//double a = (arg0/8000);
+				//int e = (int) Math.floor(a);
 				//System.out.println(e);
 				//con.x = (double) arg0;
 				System.out.println(arg0);
@@ -182,7 +182,7 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 				
 				//System.out.println("X coordinates");
 				double a = (arg0/8000);
-				double e = Math.floor(a);
+				//double e = Math.floor(a);
 				System.out.println(a);
 				ship.Xcoor1(a);
 			}
@@ -196,8 +196,8 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 		//add(ship);
 		//remove(ship);
 		Bootstrapper boot = new Bootstrapper();
-		//add(boot);
-		add(ship);
+		add(boot);
+		//add(ship);
 		boot.removePanel(this, boot, ship, con1);
 		
 		

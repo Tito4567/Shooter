@@ -1,7 +1,10 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import com.exlumina.j360.ButtonListener;
+/*import com.exlumina.j360.Controller;
+import com.exlumina.j360.ValueListener;*/
 
-public class Weapon implements KeyListener 
+public class Weapon implements KeyListener, ButtonListener 
 {
 
 	@Override
@@ -29,6 +32,12 @@ public class Weapon implements KeyListener
 	{
 		// pos ship location
 		// angle ship
+		
+	}
+
+	@Override
+	public void button(boolean arg0) {
+		// TODO Auto-generated method stub
 		
 	}
 	

@@ -1,20 +1,17 @@
 import java.awt.BorderLayout;
 import java.awt.Button;
-import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.GridLayout;
-import java.awt.TextField;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.awt.image.ImageObserver;
 import java.io.File;
 import javax.imageio.ImageIO;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import java.awt.Font;
+
 
 
 class Bootstrapper extends JPanel
@@ -87,6 +84,7 @@ class Bootstrapper extends JPanel
 		setLayout(new BorderLayout());
 		add(new Buttons(b, c), BorderLayout.NORTH);
 		//add(new TextField("Hello world"), BorderLayout.CENTER);
+	
 		add(new SpaceBack());
 		
 	}
@@ -135,21 +133,48 @@ class Buttons extends JPanel
 	
 }
 
+// Space Back ground class Bootstrapper
 class SpaceBack extends JPanel
 {
+	
+	
+	// Below is a failed attempt to resize the background image to the JPanel. A better way was found
+	/*private Image scaledImage(Image img, int width, int height ) 
+	{
+		BufferedImage resizedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+		Graphics2D g2 = resizedImage.createGraphics();
+		g2.setRenderingHint(RenderingHints.KEY_ALPHA_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR );
+		
+		return resizedImage;
+		
+	}*/
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	protected void paintComponent(Graphics g) 
 	{
+		
+		//super.paintComponent(g);
+		//Graphics g2D = (Graphics2D) g; 
+		
 		BufferedImage image = null;
+		Image resizedImage = null;
 		
 		try {
-			image = ImageIO.read(new File("C:/Users/Tito/Desktop/spacebackground.png"));
+			image = ImageIO.read(new File("Images/unnamed.jpg"));
 			//setSize(new Dimension(image.getWidth(),image.getHeight()));
+			
+			//image2 = (BufferedImage) scaledImage(image, getWidth(), getHeight());
+			resizedImage = image.getScaledInstance(getWidth(), getHeight(), BufferedImage.SCALE_SMOOTH);
 		
 		}catch(Exception e)
 		{
 			e.printStackTrace();
 		}
 		
-		g.drawImage(image, 0, 0, this);
+		g.drawImage(resizedImage, 0, 0, this);
 	}
 }
