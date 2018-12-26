@@ -3,7 +3,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import javax.swing.ImageIcon;
+
+/*import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;*/
 import javax.swing.JFrame;
 import javax.swing.Timer;
 import com.exlumina.j360.ButtonListener;
@@ -36,7 +38,20 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 	Shooter1()
 	{
 		
-		setIconImage(new ImageIcon("Images/Archangel-Michael.jpg").getImage());
+		//setIconImage(new ImageIcon("Images/Archangel-Michael.jpg").getImage());
+		
+		
+		/* PLEASE COME BACK TO BELOW
+		 * FOR SOME REASON THE IMAGE 
+		 * ICON IS NOT WORKING!!!!!!!
+		 *
+		 *
+		 *
+		 *
+		 */
+		
+		
+		//setIconImage(new ImageIcon(getClass().getClassLoader().getResource("Archangel-Michael")));
 		Timer time = new Timer (1, this);
 		time.start();
 		setVisible(true);
@@ -228,5 +243,3 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 	}
 
 }
-
-

@@ -1,5 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.Button;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.Image;
@@ -7,22 +9,23 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
+//import java.io.File;
 import javax.imageio.ImageIO;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 
 
-class Bootstrapper extends JPanel
+public class Bootstrapper extends JPanel
 {
+	private static final long serialVersionUID = 1L;
+	
 	KBController cn = null;
 	Shooter1 shoot = null;
 	Bootstrapper booter = null;
 	Ship shp = null; 
-	int[] input = {0};
+	//int[] input = {0};
 	
-	private static final long serialVersionUID = 1L;
 	
 	Button b = new Button("Xbox controller");
 	Button c = new Button("Keyboard");
@@ -133,7 +136,7 @@ class Buttons extends JPanel
 	
 }
 
-// Space Back ground class Bootstrapper
+// Space Background class Bootstrapper
 class SpaceBack extends JPanel
 {
 	
@@ -153,6 +156,7 @@ class SpaceBack extends JPanel
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private int swit = 0;
 
 	protected void paintComponent(Graphics g) 
 	{
@@ -164,7 +168,8 @@ class SpaceBack extends JPanel
 		Image resizedImage = null;
 		
 		try {
-			image = ImageIO.read(new File("Images/unnamed.jpg"));
+			//image = ImageIO.read(new File("Images/space.jpg"));
+			image = ImageIO.read(getClass().getClassLoader().getResource("space.jpg"));
 			//setSize(new Dimension(image.getWidth(),image.getHeight()));
 			
 			//image2 = (BufferedImage) scaledImage(image, getWidth(), getHeight());
@@ -176,5 +181,72 @@ class SpaceBack extends JPanel
 		}
 		
 		g.drawImage(resizedImage, 0, 0, this);
+		g.setColor(Color.ORANGE);
+		g.setFont(new Font("TimesRoman", Font.PLAIN, 50));
+		
+		swit++;
+		
+		String text = "This program is used to demonstrate";
+		String text2 = "programming abilities of the";
+		String text3 = "developer, Gilberto Rose";
+		
+		
+		String text4 = "This program uses aspects of Java Standard Edition ";
+		String text5 = "and Java Enterprise Edition. Please select";
+		String text6 = "keyboard or Xbox360 controller above.";
+		switch(swit) 
+		{
+			case 2:
+				g.drawString("This is a demonstration", (100), (getHeight()/2 - 50));
+			break;
+			
+			case 3:
+				g.drawString(text, (100), (getHeight()/2 - 100));
+				g.drawString(text2, (100), (getHeight()/2) - 50);
+				g.drawString(text3, (100), (getHeight()/2) - 0);
+			break;
+			
+			case 4:
+				g.drawString(text, (100), (getHeight()/2 - 100));
+				g.drawString(text2, (100), (getHeight()/2) - 50);
+				g.drawString(text3, (100), (getHeight()/2) - 0);
+			break;
+			
+			case 5:
+				g.drawString(text, (100), (getHeight()/2 - 100));
+				g.drawString(text2, (100), (getHeight()/2) - 50);
+				g.drawString(text3, (100), (getHeight()/2) - 0);
+			break;
+			
+			case 6:
+				g.drawString(text4, (100), (getHeight()/2 - 100));
+				g.drawString(text5, (100), (getHeight()/2) - 50);
+				g.drawString(text6, (100), (getHeight()/2) - 0);
+			break;
+			
+			case 7:
+				g.drawString(text4, (100), (getHeight()/2 - 100));
+				g.drawString(text5, (100), (getHeight()/2) - 50);
+				g.drawString(text6, (100), (getHeight()/2) - 0);
+			break;
+			
+			case 8:
+				g.drawString(text4, (100), (getHeight()/2 - 100));
+				g.drawString(text5, (100), (getHeight()/2) - 50);
+				g.drawString(text6, (100), (getHeight()/2) - 0);
+			break;
+			
+			case 9:
+				g.drawString(text4, (100), (getHeight()/2 - 100));
+				g.drawString(text5, (100), (getHeight()/2) - 50);
+				g.drawString(text6, (100), (getHeight()/2) - 0);
+			break;
+			
+			case 10:
+				g.drawString("Enjoy the demo", 100, 100);
+				break;
+				
+		}
+		
 	}
 }

@@ -4,7 +4,7 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
-import java.io.File;
+//import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
@@ -12,8 +12,12 @@ import javax.swing.JPanel;
 
 public class Ship extends JPanel 
 {
+	
 	private double x = 0;
 	private double y = 0;
+	private int currentHeight = 0;
+	private int currentWidth = 0;
+	Image bg2 = null;
 	
 	// Below is the numerical setup for location of the energy weapon's fire
 	private double imx = x + 190;
@@ -38,10 +42,14 @@ public class Ship extends JPanel
 	  	 try
          {
 	  		 
-          image[0] = ImageIO.read(new File("Images/Archangel-Michael.jpg"));
-          image[1] = ImageIO.read(new File("Images/Ship.png"));
-          image[2] = ImageIO.read(new File("Images/space.jpg"));
+          //image[0] = ImageIO.read(new File("Images/Archangel-Michael.jpg"));
+          image[0] = ImageIO.read(getClass().getClassLoader().getResource("Archangel-Michael.jpg"));
+	  	  //image[1] = ImageIO.read(new File("Images/Ship.png"));
+          image[1] = ImageIO.read(getClass().getClassLoader().getResource("Ship.png"));
+          //image[2] = ImageIO.read(new File("Images/space.jpg"));
+          image[2] = ImageIO.read(getClass().getClassLoader().getResource("space.jpg"));
           //image[3] = ImageIO.read(new File("C:/Users/Kaylard/Desktop/Shooter-master/Shooter/images/Fire.jpg"));
+          
           // "C:/Users/Tito/Documents/ship1.jpg"
                     
          } catch(IOException r)
@@ -49,6 +57,18 @@ public class Ship extends JPanel
             System.out.println(r.getMessage());
          }
 	 }
+	
+	public Image transformImageSize(BufferedImage img, int width, int height)
+	{
+		this.currentHeight = height;
+		this.currentWidth = width;
+		
+				
+		Image bg2 = img.getScaledInstance(width, height, BufferedImage.SCALE_SMOOTH);
+		  
+		
+		return bg2;
+	}
 	
 
     
@@ -79,17 +99,24 @@ public class Ship extends JPanel
 	   Graphics2D gd = (Graphics2D) g;
 	  // Graphics2D gd1 = (Graphics2D) g;
 	   Graphics2D g2d = (Graphics2D) g;
-	   Graphics2D trying = (Graphics2D) g;
+	  // Graphics2D trying = (Graphics2D) g;
 	   //g.drawImage(image2, 0,0, null );
 	   //super.paintComponent(g);
 	   //Image GImage = image[2].getScaledInstance(getWidth(), getHeight(), BufferedImage.SCALE_SMOOTH);
 	   //gd1.drawImage(image[2], bg, null);
 	   
 	   // Below is the background 
-	   Image bg2 = image[2].getScaledInstance(getWidth(), getHeight(), BufferedImage.SCALE_SMOOTH);
+	   
+	   
+		
+	   // image[2].getScaledInstance(getWidth(), getHeight(), BufferedImage.SCALE_SMOOTH);
+	   if (getHeight() != this.currentHeight || getWidth() != this.currentWidth) { bg2 = transformImageSize(image[2], getWidth(), getHeight()); }
+	   
 	   g.drawImage(bg2, 0, 0, this);
+	   // Above is the background
+	   
 	   g2d.drawImage(image[0], at, null);
-	   trying.drawImage(image[3], attempt, null);
+	   //trying.drawImage(image[3], attempt, null);
 	   gd.drawImage(image[1], at1, null);
    }
    
@@ -114,5 +141,3 @@ public class Ship extends JPanel
 	   this.y1 += e;
    }
 }
-
-
