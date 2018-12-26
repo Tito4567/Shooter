@@ -37,6 +37,7 @@ Still working with the Bootstrapper, I think I'm going to have to rewrite
 the code to start at the Bootstrapper and pass desired start code to the 
 Shooter1.java class. 
 
+
 12/16/18
 Tonight I worked on the BootStrapper file. I'm going to have 
 to learn how to use the layouts. If an image is completed on my
@@ -49,3 +50,10 @@ So far it's not working.
 12/23/2018
 I was able to resize the back ground image for varying screen sizes
 
+12/25/2018
+Today and last night I worked on the BootStrapper. I added some text 
+to show what was the intention of the game. My friend Wayne has reluctantly
+agreed to help me test the prototypes. I uploaded the first executable jar 
+to a google drive. The link is available on my resume. This week and next week
+I will be working on Remote Method Invocation (RMI). I still have to work on 
+animation.
