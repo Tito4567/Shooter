@@ -56,4 +56,4 @@ to show what was the intention of the game. My friend Wayne has reluctantly
 agreed to help me test the prototypes. I uploaded the first executable jar 
 to a google drive. The link is available on my resume. This week and next week
 I will be working on Remote Method Invocation (RMI). I still have to work on 
-animation.
+animation. Merry Christmas.
