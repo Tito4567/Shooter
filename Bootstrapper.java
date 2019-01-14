@@ -57,7 +57,7 @@ public class Bootstrapper extends JPanel
 				
 				shoot.add(shp);
 				try {
-					Thread.sleep(5000);
+					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -169,7 +169,7 @@ class SpaceBack extends JPanel
 		
 		try {
 			//image = ImageIO.read(new File("Images/space.jpg"));
-			image = ImageIO.read(getClass().getClassLoader().getResource("space.jpg"));
+			image = ImageIO.read(getClass().getClassLoader().getResource("unnamed.jpg"));
 			//setSize(new Dimension(image.getWidth(),image.getHeight()));
 			
 			//image2 = (BufferedImage) scaledImage(image, getWidth(), getHeight());
@@ -196,53 +196,53 @@ class SpaceBack extends JPanel
 		String text6 = "keyboard or Xbox360 controller above.";
 		switch(swit) 
 		{
-			case 2:
+			case 4:
 				g.drawString("This is a demonstration", (100), (getHeight()/2 - 50));
 			break;
 			
-			case 3:
-				g.drawString(text, (100), (getHeight()/2 - 100));
-				g.drawString(text2, (100), (getHeight()/2) - 50);
-				g.drawString(text3, (100), (getHeight()/2) - 0);
-			break;
-			
-			case 4:
-				g.drawString(text, (100), (getHeight()/2 - 100));
-				g.drawString(text2, (100), (getHeight()/2) - 50);
-				g.drawString(text3, (100), (getHeight()/2) - 0);
-			break;
-			
-			case 5:
-				g.drawString(text, (100), (getHeight()/2 - 100));
-				g.drawString(text2, (100), (getHeight()/2) - 50);
-				g.drawString(text3, (100), (getHeight()/2) - 0);
-			break;
-			
 			case 6:
+				g.drawString(text, (100), (getHeight()/2 - 100));
+				g.drawString(text2, (100), (getHeight()/2) - 50);
+				g.drawString(text3, (100), (getHeight()/2) - 0);
+			break;
+			
+			/*case 8:
+				g.drawString(text, (100), (getHeight()/2 - 100));
+				g.drawString(text2, (100), (getHeight()/2) - 50);
+				g.drawString(text3, (100), (getHeight()/2) - 0);
+			break;*/
+			
+			/*case 10:
+				g.drawString(text, (100), (getHeight()/2 - 100));
+				g.drawString(text2, (100), (getHeight()/2) - 50);
+				g.drawString(text3, (100), (getHeight()/2) - 0);
+			break;*/
+			
+			case 12:
 				g.drawString(text4, (100), (getHeight()/2 - 100));
 				g.drawString(text5, (100), (getHeight()/2) - 50);
 				g.drawString(text6, (100), (getHeight()/2) - 0);
 			break;
 			
-			case 7:
+			/*case 14:
 				g.drawString(text4, (100), (getHeight()/2 - 100));
 				g.drawString(text5, (100), (getHeight()/2) - 50);
 				g.drawString(text6, (100), (getHeight()/2) - 0);
 			break;
 			
-			case 8:
+			case 16:
 				g.drawString(text4, (100), (getHeight()/2 - 100));
 				g.drawString(text5, (100), (getHeight()/2) - 50);
 				g.drawString(text6, (100), (getHeight()/2) - 0);
 			break;
 			
-			case 9:
+			case 18:
 				g.drawString(text4, (100), (getHeight()/2 - 100));
 				g.drawString(text5, (100), (getHeight()/2) - 50);
 				g.drawString(text6, (100), (getHeight()/2) - 0);
-			break;
+			break;*/
 			
-			case 10:
+			case 20:
 				g.drawString("Enjoy the demo", 100, 100);
 				break;
 				

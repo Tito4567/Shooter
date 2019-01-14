@@ -22,21 +22,37 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 	KBController con = new KBController();
 	KBController con1 = new KBController();	
 	Weapon weap = new Weapon();
+	
+	
+	
 	Controller c1 = Controller.C1;
     Controller c2 = Controller.C2;
     Controller c3 = Controller.C3;
-    Controller c4 = Controller.C4; 
+    Controller c4 = Controller.C4;
+     
+    
 	
 		
 
-	public static void main(String[] arg) throws InterruptedException
+	public static void main(String...arg) throws InterruptedException
 	{
+		Controller.C1.leftThumbX.setLogMinMax(-5, 5);
+		Controller.C2.leftThumbX.setLogMinMax(-5, 5);
+		Controller.C3.leftThumbX.setLogMinMax(-5, 5);
+		Controller.C4.leftThumbX.setLogMinMax(-5, 5);
+		
+		Controller.C1.leftThumbY.setLogMinMax(-5, 5);
+		Controller.C2.leftThumbY.setLogMinMax(-5, 5);
+		Controller.C3.leftThumbY.setLogMinMax(-5, 5);
+		Controller.C4.leftThumbY.setLogMinMax(-5, 5);
+		
 		new Shooter1();
 		
 	}
 	
 	Shooter1()
 	{
+		
 		
 		//setIconImage(new ImageIcon("Images/Archangel-Michael.jpg").getImage());
 		
