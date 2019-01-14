@@ -35,7 +35,7 @@ to get the game going. I just uploaded the new files and modifications.
 11/20/18
 Still working with the Bootstrapper, I think I'm going to have to rewrite
 the code to start at the Bootstrapper and pass desired start code to the 
-Shooter1.java class. Merry Christmas
+Shooter1.java class.
 
 
 12/16/18
@@ -57,3 +57,7 @@ agreed to help me test the prototypes. I uploaded the first executable jar
 to a google drive. The link is available on my resume. This week and next week
 I will be working on Remote Method Invocation (RMI). I still have to work on 
 animation. Merry Christmas.
+
+
+1/14/2019
+Adjusted range on thumbstick controllers. Nothing else.
