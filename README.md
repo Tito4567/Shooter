@@ -61,3 +61,9 @@ animation. Merry Christmas.
 
 1/14/2019
 Adjusted range on thumbstick controllers. Nothing else.
+
+2/1/2019
+Improved on the timing of the Bootstrapper. The timing between appearing text is
+now uniform and enough time is given to read the text. I am still struggling 
+with getting the images to appear with resizing the JFrame. I also need to 
+get in contact with graphic artist for sprites for animation. 
