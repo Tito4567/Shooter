@@ -227,6 +227,7 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 		//add(ship);
 		//remove(ship);
 		Bootstrapper boot = new Bootstrapper();
+		try{Thread.sleep(2000);}catch(Exception e) {e.printStackTrace();}
 		add(boot);
 		//add(ship);
 		boot.removePanel(this, boot, ship, con1);

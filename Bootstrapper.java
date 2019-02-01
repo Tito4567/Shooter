@@ -33,7 +33,7 @@ public class Bootstrapper extends JPanel
 	
 	public Bootstrapper() 
 	{
-		System.out.println(Toolkit.getDefaultToolkit().getScreenSize()+" Testing screen size");
+		//System.out.println(Toolkit.getDefaultToolkit().getScreenSize()+" Testing screen size");
 		
 				
 		b.setSize(30, 50);
@@ -85,9 +85,9 @@ public class Bootstrapper extends JPanel
 		add(c);*/
 		
 		setLayout(new BorderLayout());
+		try {Thread.sleep(2000);}catch(Exception e) {e.printStackTrace();}
 		add(new Buttons(b, c), BorderLayout.NORTH);
-		//add(new TextField("Hello world"), BorderLayout.CENTER);
-	
+		try {Thread.sleep(2000);}catch(Exception e) {e.printStackTrace();}
 		add(new SpaceBack());
 		
 	}
@@ -125,7 +125,9 @@ class Buttons extends JPanel
 	
 	public Buttons(Button a, Button b)
 	{
+		
 		setLayout(new GridLayout(1,6));
+		try {Thread.sleep(2000);}catch(Exception e) {e.printStackTrace();}
 		add(new JLabel(" "));
 		add(new JLabel(" "));
 		add(a);
@@ -185,25 +187,32 @@ class SpaceBack extends JPanel
 		g.setFont(new Font("TimesRoman", Font.PLAIN, 50));
 		
 		swit++;
+		if(swit == 1) {g.drawString("This is a demonstration", (100), (getHeight()/2 - 50));}
+		try {Thread.sleep(5000);}catch(Exception e) {e.printStackTrace();}
+		
 		
 		String text = "This program is used to demonstrate";
 		String text2 = "programming abilities of the";
 		String text3 = "developer, Gilberto Rose";
-		
-		
 		String text4 = "This program uses aspects of Java Standard Edition ";
 		String text5 = "and Java Enterprise Edition. Please select";
 		String text6 = "keyboard or Xbox360 controller above.";
+		String text7 = "Enjoy the demo. Choose Keyboard or Controller.";
+		
 		switch(swit) 
 		{
-			case 4:
-				g.drawString("This is a demonstration", (100), (getHeight()/2 - 50));
-			break;
+			/*case 4:
+				//g.drawString("This is a demonstration", (100), (getHeight()/2 - 50));
+				// Below attempt to pause thread doesn't seem to work
+				//try {Thread.sleep(5000);}catch(Exception e) {e.printStackTrace();}
+			break;*/
 			
-			case 6:
+			case 2:
 				g.drawString(text, (100), (getHeight()/2 - 100));
 				g.drawString(text2, (100), (getHeight()/2) - 50);
 				g.drawString(text3, (100), (getHeight()/2) - 0);
+				// Below attempt to pause thread doesn't seem to work
+				//try {Thread.sleep(5000);}catch(Exception e) {e.printStackTrace();}
 			break;
 			
 			/*case 8:
@@ -218,10 +227,12 @@ class SpaceBack extends JPanel
 				g.drawString(text3, (100), (getHeight()/2) - 0);
 			break;*/
 			
-			case 12:
+			case 3:
 				g.drawString(text4, (100), (getHeight()/2 - 100));
 				g.drawString(text5, (100), (getHeight()/2) - 50);
 				g.drawString(text6, (100), (getHeight()/2) - 0);
+				// Below attempt to pause thread doesn't seem to work
+				//try {Thread.sleep(5000);}catch(Exception e) {e.printStackTrace();}
 			break;
 			
 			/*case 14:
@@ -242,8 +253,10 @@ class SpaceBack extends JPanel
 				g.drawString(text6, (100), (getHeight()/2) - 0);
 			break;*/
 			
-			case 20:
-				g.drawString("Enjoy the demo", 100, 100);
+			case 4:
+				g.drawString(text7, 100, 100);
+				// Below attempt to pause thread doesn't seem to work
+				//try {Thread.sleep(5000);}catch(Exception e) {e.printStackTrace();}
 				break;
 				
 		}
