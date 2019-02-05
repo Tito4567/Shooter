@@ -67,3 +67,7 @@ Improved on the timing of the Bootstrapper. The timing between appearing text is
 now uniform and enough time is given to read the text. I am still struggling 
 with getting the images to appear with resizing the JFrame. I also need to 
 get in contact with graphic artist for sprites for animation. 
+
+2/5/2019
+Improved on controller classes. Moving Xbox controller classes over to its own file. 
+Still have to implement RMI.
