@@ -3,7 +3,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
 /*import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;*/
 import javax.swing.JFrame;
@@ -23,6 +22,9 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 	KBController con1 = new KBController();	
 	Weapon weap = new Weapon();
 	
+	// Values are to test gamepad 
+	int a = 0;
+	int b = 0;
 	
 	
 	Controller c1 = Controller.C1;
@@ -31,10 +33,7 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
     Controller c4 = Controller.C4;
      
     
-	
-		
-
-	public static void main(String...arg) throws InterruptedException
+    public static void main(String...arg) throws InterruptedException
 	{
 		Controller.C1.leftThumbX.setLogMinMax(-5, 5);
 		Controller.C2.leftThumbX.setLogMinMax(-5, 5);
@@ -121,53 +120,13 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 			
 		});
 		
-		Controller.C1.leftThumbY.addValueChangedListener(new ValueListener() 
-		{
-
-			@Override
-			public void value(int arg0)
-			{
-				System.out.println("Y coordinates");
-				System.out.println(arg0);
-				
-			}
-			
-		});
+		Controller.C1.leftThumbY.addValueChangedListener(new XBoxControllerY());
 		
-		Controller.C1.leftThumbX.addValueChangedListener(new ValueListener() 
-		{
-
-			@Override
-			public void value(int arg0)
-			{
-				System.out.println("X coordinates");
-				//double a = (arg0/8000);
-				//int e = (int) Math.floor(a);
-				//System.out.println(e);
-				//con.x = (double) arg0;
-				System.out.println(arg0);
-			}
-			
-		});
+		Controller.C1.leftThumbX.addValueChangedListener(new XBoxControllerX());
 		
-		c2.buttonX.addButtonPressedListener(new ButtonListener() 
-		{
-
-			@Override
-			public void button(boolean arg0)
-			{
-				System.out.println("X pressed");
-				
-			}});
-	c2.buttonY.addButtonPressedListener(new ButtonListener()
-		{
-
-			@Override
-			public void button(boolean arg0) 
-			{
-				System.out.println("Y Button pressed");
-				
-			}});
+		c2.buttonX.addButtonPressedListener(new XBoxControllerX());
+	    c2.buttonY.addButtonPressedListener(new XBoxControllerY());
+		
 		
 		c2.buttonB.addButtonPressedListener(new ButtonListener()
 		{
@@ -243,9 +202,12 @@ public class Shooter1 extends JFrame implements ActionListener, ButtonListener
 		
 		ship.Xcoor1(con.xCoor()); 
 		ship.Ycoor1(con.yCoor());
-		ship.Xcoor(con1.x1Coor());
-		ship.Ycoor(con1.y1Coor());
+		/*ship.Xcoor(con1.x1Coor());
+		ship.Ycoor(con1.y1Coor());*/
 		ship.rotate = con.angle;
+		ship.Xcoor(a);
+		ship.Ycoor(b);
+		
 
 		// just added below
 		ship.rotate1 = con1.angle1;
