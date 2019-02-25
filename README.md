@@ -71,3 +71,8 @@ get in contact with graphic artist for sprites for animation.
 2/5/2019
 Improved on controller classes. Moving Xbox controller classes over to its own file. 
 Still have to implement RMI.
+
+2/20/1019
+Began working on a diagram to follow growing complexity of the project. 
+Also working on xbox controller has to be improved to add drift. RMI still
+has to be added
